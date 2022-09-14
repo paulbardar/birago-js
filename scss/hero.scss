@@ -1,0 +1,205 @@
+
+
+
+//@media (min-width: 1400px) {
+//  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+//    max-width: $container-xl-max-widths;
+//    padding: 0 20px;
+//  }
+//}
+
+// Image giphy styles
+.img-giff {
+  //position: absolute;
+  position: fixed;
+  overflow: hidden;
+  bottom: 0;
+  right: 0;
+  //top: 0;
+  //left: 0;
+  //width: 100%;
+  width: 100vw;
+  //height: 100%;
+  height: 100vh;
+  z-index: 100;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: url('../images/giphy.gif');
+  background-size: cover;
+  animation: 1s ease-in 1.5s 1 forwards giphyDown;
+  &:after {
+    content: '';
+    display:block;
+    width:100%;
+    //width: 100vw;
+    height:100%;
+    //height: 100vh;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:1;
+    transform: translateY(0%);
+    // transition: transform 1s cubic-bezier(.16,.67,.67,.98);
+    transition: transform 1s ease-in;
+    background: #fff;
+  }
+  &.imagegifshow {
+    &:after {
+      transform: translateY(-101%);
+    }
+  }
+  &.imagesmall {
+    width: 300px;
+    height: 200px;
+    z-index: 0;
+    right: 20px;
+    position: absolute;
+    bottom: 0;
+    &.removeAnimation {
+      animation:none !important;
+      bottom: 0;
+      right: 3%;
+    }
+  }
+  &.imggif-anim {
+    animation: giphyFlyingOut 1s ease-in 1 forwards;
+  }
+}
+
+.hero {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 200px;
+  overflow: hidden;
+  &.visual {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .container {
+
+  }
+  .hero-wrap {
+    position: relative;
+    //padding: 60px 0 0;
+  }
+  .hero-content {
+    padding: 60px 0 0;
+    position: relative;
+    .hero-footer {
+      max-width: 541px;
+      margin-left: 226px;
+      a {
+          display: inline-block;
+          font-size: $font-size-base;
+          letter-spacing: 0.01rem;
+          padding: 0.6rem 0.5rem 0.6rem 2.5rem;
+          //border: 0.3rem solid $white;
+          //text-transform: uppercase;
+        // margin-bottom: 15.5rem;
+
+        }
+      &--text {
+        max-width: 295px;
+        &.hero-text-anim {
+          animation: heroTextFlyRight 1s ease-in 1 forwards;
+        }
+      }
+    }
+  }
+  .title-block {
+    padding: 0 50px 85px 150px;
+    position: relative;
+    z-index: 10;
+  }
+  .hero-title {
+    font-family: $font-prompt;
+    font-weight: 700;
+    color: $dark;
+    text-transform: uppercase;
+    .h1-title-line {
+      text-align: left;
+      display: block;
+      line-height: 99px;
+      margin-bottom: 9px;
+      .h1-italic {
+        font-style: italic;
+        text-transform: lowercase;
+        font-weight: 300;
+      }
+      &:nth-child(odd) {
+        padding-left: 96px;
+      }
+      &:nth-child(even) {
+        position: relative;
+        padding-left: 5px;
+      }
+      &:last-child {
+        padding-left: 112px;
+      }
+      .color-title {
+        color: $orange;
+      }
+      &.h1-title-line {
+        &.title-fly-right {
+          animation: titleFlyingRight 1s ease-in 1 forwards;
+        }
+        &.title-fly-left {
+          animation: titleFlyingLeft 1s ease-in 1 forwards;
+        }
+
+      }
+    }
+
+  }
+  .btn-hero {
+    &.btn-hero-anim {
+      animation: btnHeroFlyLeft 1s ease-in 1 forwards;
+    }
+  }
+  .img-gif2 {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    animation: img2Flying 2s ease-in 0.5s 1 forwards;
+    img {
+      width: 155px;
+      height: 150px;
+      border-radius: 10px;
+    }
+    &.imggif2-anim {
+      animation: img2FlyingBack 1s ease-in 1 forwards;
+    }
+  }
+  &.hero-top {
+    .img-giff {
+      animation: giphyFlyingBack 1s ease-in 1 forwards;
+    }
+    .img-gif2 {
+      &.imggif2-anim {
+        animation: img2Flying 1s ease-in  1 forwards;
+      }
+    }
+    .hero-title {
+      .h1-title-line {
+        &.title-fly-right {
+          animation: titleFlyingrightBack 1s ease-in 1 forwards;
+        }
+        &.title-fly-left {
+          animation: titleFlyingLeftBack 1s ease-in 1 forwards;
+        }
+      }
+    }
+    .btn-hero {
+      &.btn-hero-anim {
+        animation: btnHeroFlyLeftBack 1s ease-in 1 forwards;
+      }
+    }
+    .hero-content {
+      .hero-footer--text {
+        animation: heroTextFlyRightBack 1s ease-in 1 forwards;
+      }
+    }
+
+  }
+}

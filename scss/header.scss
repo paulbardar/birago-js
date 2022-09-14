@@ -1,0 +1,173 @@
+.header {
+  padding: 33px 0 40px;
+  background-color: $xlight-gray;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  .main-nav {
+    .navbar-brand {
+      margin: 0;
+    }
+    .navbar-toggler {
+      position: relative;
+      width: 20px;
+      height: 25px;
+      background: none;
+      border: none;
+      color: $dark;
+      box-shadow: none;
+      overflow: hidden;
+      &.collapsed {
+        background: none;
+        border: none;
+      }
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        //width: 100%;
+        width: 20px;
+        transition: all .3s ease-in;
+        transform: translate(-50%, -50%);
+        border-bottom: 2px solid $dark;
+        height: 0;
+
+        @for $i from 1 through 3 {
+          &:nth-child(#{$i}) {
+            @if ($i == 1) {
+              margin-top: -8px;
+            }
+            @if ($i == 3) {
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+      &.open-btn {
+        overflow: hidden;
+        span {
+          transition: all .3s ease-in;
+          @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+              @if ($i == 1) {
+                margin-top: 0;
+                transform: translate(-50%, -50%) rotate(45deg);
+              }
+              @if ($i == 3) {
+                margin-top: 0;
+                transform: translate(-50%, -50%) rotate(-45deg);
+              }
+              @if ($i == 2) {
+                transform: translateX(-100px);
+              }
+            }
+          }
+        }
+      }
+    }
+    .navbar-nav {
+
+      .nav-item {
+        margin: 0 2.8%;
+        position: relative;
+        @media(max-width: 1220px) {
+          margin: 0 2.5%;
+        }
+        .nav-link {
+          color: $dark;
+          font-size: 16px;
+          &:after {
+            background-color: transparent;
+            border: 1px solid $dark;
+            border-top: 0;
+            border-left: 0;
+            width: 8px;
+            height: 8px;
+            transform: rotate(45deg) translate(5px, -3px);
+          }
+        }
+        .dropdown-menu {
+          .dropdown-item {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .navbar-contacts {
+      .btn-outline-primary {
+        font-size: 14px;
+        color: $dark;
+        line-height: 1.5;
+        padding: 6px 15px;
+        border-radius: 20px;
+        border: 2px solid $orange;
+        transition: all .3s ease-in;
+        margin-left: 8px;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:hover {
+          background-color: $orange;
+        }
+      }
+    }
+    @media(max-width: 992px) {
+
+      .navbar-nav {
+        margin-top: 67px;
+        .nav-item {
+          margin: 0 0 48px 0;
+          .nav-link {
+            font-size: 24px;
+            font-weight: 500;
+            &.dropdown-toggle {
+              position: relative;
+              &:after {
+                position: absolute;
+                right: 0;
+              }
+            }
+            &.dropdown-toggle.show {
+              color: $orange;
+              &:after {
+                transform: translate(10px, 4px) rotate(225deg);
+                border: 1px solid $orange;
+                border-top: 0;
+                border-left: 0;
+              }
+            }
+          }
+          .dropdown-menu {
+            border: none;
+            li {
+              margin-bottom: 16px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+            .dropdown-item {
+              text-align: left;
+              font-size: 16px;
+              line-height: 1.5;
+              padding: 0;
+              margin: 0;
+
+            }
+          }
+        }
+      }
+      .navbar-contacts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn-outline-primary {
+          margin-left: 24px;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

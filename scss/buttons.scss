@@ -1,0 +1,56 @@
+.btn-circle {
+  position: relative;
+  color: $dark;
+  border: none;
+  display: inline-block;
+  font-size: $font-size-base;
+  letter-spacing: 0.01rem;
+  padding: 0.6rem 0.5rem 0.6rem 2.5rem;
+  z-index: 2;
+
+  &:hover {
+    color: $dark;
+  }
+  &:after {
+    content: '\f061';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: $dark;
+    margin-left: 0.5rem;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: -6px;
+    left: -6px;
+    background: orange;
+    //background: red;
+    transition: all .3s ease-in;
+    z-index: -1;
+  }
+  &.btn-circle-anim-first {
+    &:before {
+      animation: btnAnimation .5s ease-in 1 forwards;
+      border-radius: 25px;
+    }
+  }
+  &.btn-circle-anim-back {
+    &:before {
+      animation: btnAnimationBack .5s ease-in 1 forwards;
+      border-radius: 25px;
+    }
+  }
+  &.btn-white-color {
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+    &:after {
+      color: $white;
+    }
+  }
+}

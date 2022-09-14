@@ -1,0 +1,93 @@
+.aboutus {
+  padding: 80px 0 180px;
+  background: $green;
+  height: 100vh;
+  .block-title {
+    color: $white;
+    margin-bottom: 73px;
+    span {
+      font-style: italic;
+      text-transform: capitalize;
+      font-weight: 300;
+    }
+  }
+  .block-image {
+    width: 31%;
+    position: relative;
+
+    .image-item {
+      position: relative;
+      z-index: 2;
+      transform: translate(-47px, -54px);
+      img {
+        max-width: none;
+        width: 122%;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 57%;
+      top: -57px;
+      transform: translate(-50%, 0);
+      width: 284px;
+      height: 284px;
+      max-width: 284px;
+      max-height: 284px;
+      border-radius: 50%;
+      background: $orange;
+      z-index: 1;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      width: 100%;
+      height: 153px;
+      background-image: url('../images/airplane-shadow.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 1;
+    }
+  }
+  .aboutus-textblock {
+    width: 69%;
+    &--item {
+      width: 47%;
+      color: $white;
+      p {
+        font-weight: 300;
+        margin-bottom: 24px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        span {
+          font-weight: 500;
+        }
+      }
+      &.second-col {
+        p {
+          &:first-child {
+            max-width: 317px;
+          }
+          &:nth-child(2){
+            margin-bottom: 42px;
+          }
+        }
+      }
+    }
+  }
+  @media(max-width: 992px) {
+    .block-image {
+      width: 100%;
+    }
+    .aboutus-textblock {
+      width: 100%;
+      &--item {
+        width: 100%;
+      }
+    }
+  }
+}

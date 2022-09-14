@@ -1,0 +1,65 @@
+
+$fonts: '../fonts/';
+$fa-font-path: '../fonts/fontawesome';
+
+// Fonts
+$iconfont: 'FontAwesome';
+$font-prompt: 'Prompt', sans-serif;
+
+
+$container-lg-max-widths: 1354px;
+$container-xl-max-widths: 1354px;
+
+// Colors
+$dark: #393738;
+$white: #ffffff;
+$orange: #FF8607;
+$green: #006633;
+
+$xlight-gray: #F7F7F7;
+
+
+
+// base vars
+$text-color-base: $dark;
+$body-bg: $xlight-gray;
+$font-family-base: $font-prompt;
+$font-title: $font-prompt;
+$font-size-base: 1.6rem;
+$font-size-secondary: 2rem;
+$font-size-thirdly: 2.4rem;
+$font-weight-base: 300;
+$font-weight-secondary: 500;
+$font-weight-title: 700;
+$font-weight-titlespan: 300;
+$line-height-base: 1.5;
+$line-height-secondary: 1.4;
+$line-height-titleh1: 1.1;
+$line-height-titleh2: 1.05;
+$line-height-titleh3: 1.2;
+$line-height-titleh4: 1.42;
+$links-color-base: inherit;
+$links-font-size: 1.4rem;
+$links-line-height: 1.5rem;
+
+$transition: all .3s ease;
+
+
+$btn-bg: $orange;
+$btn-color: $dark;
+
+
+$fs-h1-title: 9rem;
+$fs-h2-title: 6rem;
+$fs-h3-title: 4rem;
+$fs-h4-title: 2.6rem;
+$fs-h5-title: 2.2rem;
+$fs-h6-title: 1.4rem;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1354px
+);

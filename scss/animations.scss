@@ -1,0 +1,161 @@
+// Btn animation on
+@keyframes btnAnimation {
+  from {
+    width: 45px;
+  }
+  90% {
+    width: 110%;
+  }
+  to {
+    width: 100%;
+  }
+}
+// Btn animation leave
+@keyframes btnAnimationBack {
+  from {
+    width: 100%;
+  }
+  90% {
+    width: 35px;
+  }
+  to {
+    width: 45px;
+  }
+
+}
+
+// giphy animation
+@keyframes giphyDown {
+  from {
+    // transform: scale(1);
+    width: 100vw;
+    height: 100vh;
+  }
+  95% {
+    position: absolute;
+  }
+  to {
+    // transform: scale(0.5);
+    width: 300px;
+    height: 200px;
+    right: 21px;
+    position: absolute;
+  }
+}
+@keyframes giphyFlyingOut {
+  from {
+    right: 20px;
+    bottom: 0;
+  }
+  to {
+    transform: translate(1000px, -500px);
+  }
+}
+@keyframes giphyFlyingBack {
+  from {
+    transform: translate(1000px, -350px);
+  }
+  to {
+    right: 20px;
+    bottom: 0;
+  }
+}
+
+// Image 2 Anumation
+//@media screen and (max-width:1920px) {
+  @keyframes img2Flying {
+    from {
+      transform: translate(-1000px, -350px);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes img2FlyingBack {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-1000px, -350px);
+    }
+  }
+//}
+// Title flying
+@keyframes titleFlyingRight {
+  from {
+    transform: translateX(0);
+    transform: translateY(0);
+  }
+  to {
+    // transform: translateX(100%);
+    // transform: translateY(100%);
+    transform: translate(1500px, -350px);
+  }
+}
+
+@keyframes titleFlyingrightBack {
+  from {
+    // transform: translateX(0);
+    transform: translate(1500px, -350px);
+  }
+  to {
+    // transform: translateX(100%);
+    // transform: translateY(100%);
+    transform: translate(0, 0);
+  }
+}
+@keyframes titleFlyingLeft {
+  from{
+    transform: translateX(0);
+    transform: translateY(0);
+  }
+  to {
+    transform: translate(-1500px, -300px);
+  }
+}
+@keyframes titleFlyingLeftBack {
+  from{
+    transform: translate(-1500px, -300px);
+
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+// hero btn animation
+@keyframes btnHeroFlyLeft {
+    from {
+      transform: translateX(0);
+      transform: translateY(0);
+    }
+    to {
+      transform: translate(-1500px, -550px);
+    }
+}
+@keyframes btnHeroFlyLeftBack {
+    from {
+      transform: translate(-1500px, -550px);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+}
+
+// Hero footer text anim
+@keyframes heroTextFlyRight {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(1500px, -350px);
+  }
+}
+@keyframes heroTextFlyRightBack {
+  from {
+    transform: translate(1500px, -350px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
